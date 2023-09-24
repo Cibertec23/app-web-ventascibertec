@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 @AllArgsConstructor
 @Embeddable
-public class OrderDetailsId implements Serializable {
+public class OrderDetailId implements Serializable {
 
     private Integer orderid;
     private Integer productid;

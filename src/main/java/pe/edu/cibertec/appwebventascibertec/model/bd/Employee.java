@@ -13,7 +13,7 @@ import java.util.Date;
 @Entity
 @NoArgsConstructor
 @Table(name="Employees")
-public class Employees {
+public class Employee {
 
     @Id
     private Integer employeeid;

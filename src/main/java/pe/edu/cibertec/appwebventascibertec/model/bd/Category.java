@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 @Table(name = "categories")
-public class Categories {
+public class Category {
     @Id
     private Integer categoryid;
     @Column(name = "categoryname")

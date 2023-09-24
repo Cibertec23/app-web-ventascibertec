@@ -6,15 +6,15 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import pe.edu.cibertec.appwebventascibertec.model.bd.pk.OrderDetailsId;
+import pe.edu.cibertec.appwebventascibertec.model.bd.pk.OrderDetailId;
 
 @Data @NoArgsConstructor
 @Entity
 @Table(name = "orderdetails")
-public class OrderDetails {
+public class OrderDetail {
 
     @EmbeddedId
-    private OrderDetailsId orderdetailsid;
+    private OrderDetailId orderdetailsid;
     @Column(name = "unitprice")
     private Double unitprice;
     @Column(name = "quantity")

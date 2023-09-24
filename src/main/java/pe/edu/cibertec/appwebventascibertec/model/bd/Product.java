@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data @NoArgsConstructor
 @Entity
 @Table(name = "products")
-public class Products {
+public class Product {
     @Id
     private Integer productid;
     @Column(name = "productname")
@@ -26,10 +26,10 @@ public class Products {
     private Boolean descontinued;
     @ManyToOne
     @JoinColumn(name = "supplierid")
-    private Suppliers suppliers;
+    private Supplier suppliers;
     @ManyToOne
     @JoinColumn(name = "categoryid")
-    private Categories categories;
+    private Category categories;
 
 
 }

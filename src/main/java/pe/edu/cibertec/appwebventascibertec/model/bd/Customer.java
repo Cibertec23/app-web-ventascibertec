@@ -7,13 +7,12 @@ import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
-@Data
+@Data @NoArgsConstructor
 @Entity
-@Table(name = "suppliers")
-public class Suppliers {
+@Table(name = "customers")
+public class Customer {
     @Id
-    private Integer supplierid;
+    private String customerid;
     @Column(name = "companyname")
     private String companyname;
     @Column(name = "contactname")
@@ -34,6 +33,5 @@ public class Suppliers {
     private String phone;
     @Column(name = "fax")
     private String fax;
-    @Column(name = "homepage")
-    private String homepage;
+
 }

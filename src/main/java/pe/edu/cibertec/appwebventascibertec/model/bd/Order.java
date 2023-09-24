@@ -9,7 +9,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Entity
 @Table(name = "orders")
-public class Orders {
+public class Order {
 
     @Id
     private Integer orderid;
@@ -37,10 +37,10 @@ public class Orders {
     private String shipcountry;
     @ManyToOne
     @JoinColumn(name = "customerid")
-    private Customers customers;
+    private Customer customers;
     @ManyToOne
     @JoinColumn(name = "employeeid")
-    private Employees employees;
+    private Employee employees;
 
 
 }
