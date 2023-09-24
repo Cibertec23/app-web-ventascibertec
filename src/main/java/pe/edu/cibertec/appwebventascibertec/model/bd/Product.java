@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "products")
 public class Product {
     @Id
+    @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Integer productid;
     @Column(name = "productname")
     private String productname;
@@ -16,14 +17,14 @@ public class Product {
     private String quantityperunit;
     @Column(name = "unitprice")
     private Double unitprice;
-    @Column(name = "unitsintstock")
-    private Integer unitsintstock;
+    @Column(name = "unitsinstock")
+    private Integer unitsinstock;
     @Column(name = "unitsonorder")
     private Integer unitsonorder;
     @Column(name = "reorderlevel")
     private Integer reorderlevel;
-    @Column(name = "descontinued")
-    private Boolean descontinued;
+    @Column(name = "discontinued")
+    private Boolean discontinued;
     @ManyToOne
     @JoinColumn(name = "supplierid")
     private Supplier suppliers;

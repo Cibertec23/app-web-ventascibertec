@@ -22,7 +22,7 @@ public class ProductController {
     public String index(Model model){
         model.addAttribute("listaProductos",
                 productService.listarProductos());
-        return "";
+        return "backoffice/product/frmMantProduct";
     }
     @GetMapping("/listar")
     @ResponseBody

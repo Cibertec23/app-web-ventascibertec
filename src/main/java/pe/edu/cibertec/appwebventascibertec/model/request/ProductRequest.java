@@ -7,7 +7,7 @@ public class ProductRequest {
     private Integer productid;
     private String productname;
     private Double unitprice;
-    private Boolean discontuned;
+    private Boolean discontinued;
     private Integer supplierid;
     private Integer categoryid;
 }
