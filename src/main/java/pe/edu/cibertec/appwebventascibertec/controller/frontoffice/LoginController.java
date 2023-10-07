@@ -26,7 +26,7 @@ public class LoginController {
         return "frontoffice/auth/frmLogin";
     }
 
-    /*@PostMapping("/login-success")
+    @PostMapping("/login-success")
     public String loginSuccess(HttpServletRequest request) {
         // Get the authenticated user's details
         UserDetails userDetails = (UserDetails) SecurityContextHolder
@@ -35,27 +35,8 @@ public class LoginController {
                 .getPrincipal();
         HttpSession session = request.getSession();
         session.setAttribute("username", userDetails.getUsername());
-        // Comprueba si el objeto UserDetails es una instancia de tu clase Usuario
-        if (userDetails instanceof Usuario) {
-            // Convierte el UserDetails a tu clase Usuario
-            Usuario usuario = (Usuario) userDetails;
-
-            // Ahora puedes acceder a los atributos específicos de tu clase Usuario
-            String username = usuario.getNombres();
-            // Realiza cualquier otra operación que necesites con el objeto Usuario
-            HttpSession session = request.getSession();
-            session.setAttribute("username", username);
-        } else {
-            // Manejar el caso en que el UserDetails no sea una instancia de tu clase Usuario
-            HttpSession session = request.getSession();
-            session.setAttribute("username", userDetails.getUsername());
-        }
-
-        // Store user information in the HttpSession
-
-
         return "redirect:/auth/home";
-    }*/
+    }
 
 
     @GetMapping("/registrar")
