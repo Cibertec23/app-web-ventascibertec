@@ -1,14 +1,15 @@
 package pe.edu.cibertec.appwebventascibertec.model.bd;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.User;
 
+import java.util.Collection;
 import java.util.Set;
 
-@Data
-@NoArgsConstructor @AllArgsConstructor
+@Getter
+@Setter
 @Entity
 @Table(name = "usuario")
 public class Usuario {
@@ -27,9 +28,12 @@ public class Usuario {
     private String apellidos;
     @Column(name = "activo")
     private Boolean activo;
-    @ManyToMany
+    @ManyToMany(cascade =  CascadeType.MERGE,
+            fetch = FetchType.EAGER)
     @JoinTable(name = "usuario_rol", joinColumns =
         @JoinColumn(name = "idusuario"),
         inverseJoinColumns = @JoinColumn(name = "idrol"))
     private Set<Rol> roles;
+
+
 }
