@@ -37,7 +37,7 @@ public class SecurityConfig {
                 ).formLogin(
                         login ->
                                 login.loginPage("/auth/login")
-                                        .defaultSuccessUrl("/auth/home")
+                                        .defaultSuccessUrl("/auth/login-success")
                                         .usernameParameter("nomusuario")
                                         .passwordParameter("password")
                 ).authenticationProvider(authenticationProvider());
