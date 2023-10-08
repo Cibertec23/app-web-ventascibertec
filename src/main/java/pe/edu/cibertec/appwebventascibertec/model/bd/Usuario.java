@@ -27,7 +27,9 @@ public class Usuario {
     private String apellidos;
     @Column(name = "activo")
     private Boolean activo;
-    @ManyToMany
+    @ManyToMany(
+            cascade = CascadeType.MERGE,
+            fetch = FetchType.EAGER )
     @JoinTable(name = "usuario_rol", joinColumns =
         @JoinColumn(name = "idusuario"),
         inverseJoinColumns = @JoinColumn(name = "idrol"))
